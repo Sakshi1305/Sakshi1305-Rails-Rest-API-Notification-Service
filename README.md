@@ -47,26 +47,26 @@ $ rails server
 
 ### CRUD
 
-**Create a new developer**:
-
-```console
-curl --location -g --request POST 'localhost:3000/api/v1/developers?developer[full_name]=developer12&developer[email]=developer1@gmail.com2&developer[mobile]=+917726938963&developer[team_ids]=17'
-```
-
 **Create a new team**:
 
 ```console
-curl --location -g --request POST 'localhost:3000/api/v1/teams?team[name]=team1&team[dept_name]=cs&team[developer_ids]=2'
+curl --location -g --request POST 'localhost:3000/api/v1/teams?team[name]=team1&team[dept_name]=cs'
+```
+
+**Create a new developer**:
+
+```console
+curl --location -g --request POST 'localhost:3000/api/v1/developers?developer[full_name]=developer12&developer[email]=developer1@gmail.com2&developer[mobile]=+917726938963&developer[team_ids]=1'
 ```
 
 **Update an existing team by id**:
 
 ```console
-curl --location -g --request PUT 'localhost:3000/api/v1/teams/15?team[name]=team2&team[dept_name]=cse1&team[developer_ids]=2'
+curl --location -g --request PUT 'localhost:3000/api/v1/teams/1?team[name]=team2&team[dept_name]=cse1&team[developer_ids]=1'
 ```
 
 **Create a new message**:
 
 ```console
-curl --location -g --request POST 'localhost:3000/api/v1/messages?message[content]=Hi%20Testing%20Message&message[title]=message&message[team_id]=17'
+curl --location -g --request POST 'localhost:3000/api/v1/messages?message[content]=Hi%20Testing%20Message&message[title]=message&message[team_id]=1'
 ```
